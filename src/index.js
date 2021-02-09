@@ -2,5 +2,10 @@
 // You should implement your task here.
 
 module.exports = function towelSort (matrix) {
-  return ((matrix[0]+',' + matrix[1].reverse() + ',' + matrix[2]).split(',')).map(e => parseFloat(e))
+  for(let i = 0; i < matrix.length; i++) {
+    if(i % 2) matrix[i].reverse()
+  }
+  let x = [].concat(...matrix)
+  
+ return x
 }
